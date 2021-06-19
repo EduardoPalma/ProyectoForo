@@ -64,7 +64,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
         if(requestCode == 1){
-            //hacer algo
+            //arreglar cosas
         }else{
             if(requestCode == 2){
                 if(resultCode == Activity.RESULT_OK){
