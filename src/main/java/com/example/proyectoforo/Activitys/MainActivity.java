@@ -24,6 +24,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.activity_main);
         arbol = new Arbol();
         tablaUsuarios = new TablaHash(200);
@@ -38,8 +39,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         arbol.insertar(f1);
         arbol.insertar(f2);
         arbol.insertar(f3);
-        inicio = (Button) findViewById(R.id.iniciar);
-        registro = (Button) findViewById(R.id.registro);
+        inicio = findViewById(R.id.iniciar);
+        registro = findViewById(R.id.registro);
         inicio.setOnClickListener(this);
         registro.setOnClickListener(this);
 
@@ -63,7 +64,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
         if(requestCode == 1){
-
+            //hacer algo
         }else{
             if(requestCode == 2){
                 if(resultCode == Activity.RESULT_OK){
