@@ -22,7 +22,7 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolderForo> {
     @NonNull
     @Override
     public ViewHolderForo onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.activity_contenedor_foro,null,false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.activity_contenedor_foro,parent,false);
         return new ViewHolderForo(view);
     }
 

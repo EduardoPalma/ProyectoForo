@@ -1,43 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
+<androidx.cardview.widget.CardView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    app:cardCornerRadius="5dp"
+    app:cardElevation="10dp">
+
 
     <LinearLayout
         android:id="@+id/ContenerForo"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="-297dp">
+        android:padding="10dp">
 
-        <LinearLayout
-            android:id="@+id/atributos"
+        <TextView
+            android:id="@+id/Usuario"
             android:layout_width="match_parent"
-            android:layout_height="95dp"
-            android:orientation="vertical">
+            android:layout_height="wrap_content"
+            android:text="@string/Usuario" />
 
-            <TextView
-                android:id="@+id/titulo"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/Titulo" />
+        <TextView
+            android:id="@+id/Descripcion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/descripcion" />
 
-            <TextView
-                android:id="@+id/Descripcion"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/descripcion" />
+        <TextView
+            android:id="@+id/titulo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/Titulo" />
 
-            <TextView
-                android:id="@+id/Usuario"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/Usuario" />
-        </LinearLayout>
     </LinearLayout>
-</androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

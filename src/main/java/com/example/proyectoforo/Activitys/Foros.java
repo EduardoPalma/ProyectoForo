@@ -5,6 +5,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
+import android.view.Menu;
 
 import com.example.proyectoforo.R;
 import com.example.proyectoforo.clases.Foro;
@@ -27,6 +28,8 @@ public class Foros extends AppCompatActivity {
         recycler.setLayoutManager(new LinearLayoutManager(this));
 
         arbol = (Arbol) getIntent().getExtras().getSerializable("arbol");
+        LinearLayoutManager linear = new LinearLayoutManager(this);
+        recycler.setLayoutManager(linear);
         llenarForos(arbol.getRaiz());
         Adapter adapter = new Adapter(foros);
         recycler.setAdapter(adapter);
@@ -38,5 +41,11 @@ public class Foros extends AppCompatActivity {
             foros.add(raiz.getForo());
             llenarForos(raiz.getHijoDerecho());
         }
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu){
+        getMenuInflater().inflate(R.menu.activity_foro,menu);
+        return true;
     }
 }
