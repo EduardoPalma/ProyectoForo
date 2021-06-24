@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.ProyectoForo">
-        <activity android:name=".Activitys.Foros"></activity>
+        <activity android:name=".Activitys.ActivityComenForo"></activity>
+        <activity android:name=".Activitys.Foros" />
         <activity android:name=".Activitys.IniciarSesion" />
         <activity android:name=".Activitys.Registro" />
         <activity android:name=".Activitys.MainActivity">

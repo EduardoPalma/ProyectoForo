@@ -13,8 +13,9 @@ import com.example.proyectoforo.clases.Foro;
 
 import java.util.ArrayList;
 
-public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolderForo> {
+public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolderForo> implements View.OnClickListener{
     private ArrayList<Foro> foros;
+    private View.OnClickListener listener;
 
     public Adapter(ArrayList<Foro> foros){
         this.foros = foros;
@@ -23,6 +24,7 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolderForo> {
     @Override
     public ViewHolderForo onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.activity_contenedor_foro,parent,false);
+        view.setOnClickListener(this);
         return new ViewHolderForo(view);
     }
 
@@ -31,11 +33,22 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolderForo> {
         holder.titulo.setText(foros.get(position).getTitulo());
         holder.descrip.setText(foros.get(position).getDescrip());
         holder.idUsuario.setText(foros.get(position).getU().getNombreUsuario());
+
     }
 
     @Override
     public int getItemCount() {
         return foros.size();
+    }
+
+    public void setOnClickListener(View.OnClickListener listener){
+        this.listener = listener;
+    }
+    @Override
+    public void onClick(View v) {
+        if(listener != null){
+            listener.onClick(v);
+        }
     }
 
     public class ViewHolderForo extends RecyclerView.ViewHolder{
