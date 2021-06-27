@@ -95,7 +95,26 @@ public class Arbol implements Serializable {
         this.cant++;
         return nuevaRaiz;
     }
+    public Foro buscarForo(int cant){
+        return buscarForo(cant,this.raiz);
+    }
+    private Foro buscarForo(int cant,NodoArbol raiz){
+        if(raiz == null) return null;
+        else{
+            if(raiz.getForo().getLc().getCant() == cant) return raiz.getForo();
+            else{
+                if(raiz.getForo().getLc().getCant() > cant) return buscarForo(cant,raiz.getHijoIzquierdo());
+                else return buscarForo(cant,raiz.getHijoDerecho());
+            }
+        }
 
+    }
+
+    public void vaciar(){
+        this.raiz = null;
+        this.raiz.setHijoDerecho(null);
+        this.raiz.setHijoIzquierdo(null);
+    }
 
     public NodoArbol getRaiz() {
         return raiz;

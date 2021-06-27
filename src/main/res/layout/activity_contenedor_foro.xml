@@ -17,10 +17,10 @@
         android:padding="10dp">
 
         <TextView
-            android:id="@+id/Usuario"
+            android:id="@+id/titulo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/Usuario" />
+            android:text="@string/Titulo" />
 
         <TextView
             android:id="@+id/Descripcion"
@@ -29,10 +29,10 @@
             android:text="@string/descripcion" />
 
         <TextView
-            android:id="@+id/titulo"
+            android:id="@+id/Usuario"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/Titulo" />
+            android:text="@string/Usuario" />
 
     </LinearLayout>
 </androidx.cardview.widget.CardView>

@@ -9,6 +9,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:padding="7dp"
         android:orientation="vertical">
 
         <LinearLayout
@@ -53,12 +54,13 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:hint="Escribe Mensaje"
                 android:ems="10"
-                android:inputType="textPersonName" />
+                android:hint="@string/escribe_mensaje"
+                android:inputType="textPersonName"
+                android:autofillHints="" />
 
             <Button
-                android:id="@+id/enviar"
+                android:id="@+id/enviarComentario"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/enviar" />

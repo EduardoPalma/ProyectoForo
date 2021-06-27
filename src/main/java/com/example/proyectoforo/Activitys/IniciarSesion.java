@@ -43,6 +43,7 @@ public class IniciarSesion extends AppCompatActivity implements View.OnClickList
             if(u != null){
                 if(u.getPw().equals(contra.getText().toString())){
                     Intent f = new Intent(this,Foros.class);
+                    f.putExtra("usuario",u);
                     Bundle b = new Bundle();
                     b.putSerializable("arbol",this.arbol);
                     f.putExtras(b);

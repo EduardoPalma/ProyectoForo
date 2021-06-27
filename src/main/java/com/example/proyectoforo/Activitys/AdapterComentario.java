@@ -22,6 +22,10 @@ public class AdapterComentario extends RecyclerView.Adapter<AdapterComentario.Vi
         this.listComentarios = comentarios;
     }
 
+    public void ingresarComentario(Comentarios c){
+        this.listComentarios.add(c);
+        notifyItemInserted(this.listComentarios.size());
+    }
     @NonNull
     @Override
     public AdapterComentario.ViewHolderComentario onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {

@@ -20,6 +20,11 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolderForo> implem
     public Adapter(ArrayList<Foro> foros){
         this.foros = foros;
     }
+
+    public void ingresarForo(Foro foro){
+        this.foros.add(foro);
+        notifyItemInserted(this.foros.size());
+    }
     @NonNull
     @Override
     public ViewHolderForo onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {

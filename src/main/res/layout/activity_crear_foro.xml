@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/cardview_shadow_start_color"
+    tools:context=".Activitys.CrearForo">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="10sp"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/foroTitulo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="10sp"
+            android:autofillHints=""
+            android:ems="10"
+            android:hint="@string/Titulo"
+            android:inputType="textPersonName" />
+
+        <EditText
+            android:id="@+id/temaForo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="10sp"
+            android:autofillHints=""
+            android:ems="10"
+            android:hint="@string/tema"
+            android:inputType="textPersonName" />
+
+        <EditText
+            android:id="@+id/descripcionForo"
+            android:layout_width="match_parent"
+            android:layout_height="293dp"
+            android:layout_margin="10sp"
+            android:layout_marginBottom="30dp"
+            android:ems="10"
+            android:gravity="top"
+            android:hint="@string/descripcion"
+            android:inputType="textPersonName"
+            android:autofillHints="" />
+
+        <Button
+            android:id="@+id/buttonCrerForo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/crearForo" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
