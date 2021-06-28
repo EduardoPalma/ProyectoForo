@@ -2,7 +2,13 @@
     <string name="app_name">ProyectoForo</string>
     <string name="iniciar_Sesion">Iniciar Sesion</string>
     <string name="Registrarse">Registrarse</string>
-    <string name="Texto_inicio">Texto Completo de bienvenida....</string>
+    <string name="Texto_inicio">Bienvenido a la aplicación proyecto Foro, para hacer ingreso por favor presione el botón de registrarse, si ya está registrado presione el botón iniciar Sesión.\n
+
+\nOpciones del Foro\n
+o	Ordenar los foros por la cantidad de comentarios.\n
+o	Crear un foro.\n
+o	Al seleccionar unos de los foros, puede ingresar a comentar dicho foro.\n
+</string>
     <string name="nombre_Usurio">Nombre de Usuario</string>
     <string name="pw">Contraseña</string>
     <string name="Correo">Correo Electronico</string>

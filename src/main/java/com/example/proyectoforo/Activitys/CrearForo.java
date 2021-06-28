@@ -32,7 +32,7 @@ public class CrearForo extends AppCompatActivity implements View.OnClickListener
 
     @Override
     public void onClick(View v) {
-        Foro f = new Foro(tituloForo.getText().toString(),temaforo.getText().toString(),desForo.getText().toString(),u);
+        Foro f = new Foro(temaforo.getText().toString(),desForo.getText().toString(),tituloForo.getText().toString(),u);
         Intent intent = new Intent(this,Foros.class);
         intent.putExtra("foro",f);
         setResult(Activity.RESULT_OK,intent);
