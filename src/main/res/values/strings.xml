@@ -25,4 +25,8 @@
     <string name="crearForo">Crear Foro</string>
     <string name="cerrarSesiom">Cerrar Sesion</string>
     <string name="tema">Tema</string>
+    <string name="mayor_menor">Ordenar Menor a Mayor</string>
+    <string name="menor_mayor">Ordenar Mayor a Menor</string>
+    <string name="cantidadComen">numero</string>
+    <string name="comentarios">Co :</string>
 </resources>

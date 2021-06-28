@@ -7,6 +7,12 @@
         android:id="@+id/crearforo"
         android:title="@string/crearForo" />
     <item
+        android:id="@+id/orMaMe"
+        android:title="@string/menor_mayor" />
+    <item
+        android:id="@+id/orMeMa"
+        android:title="@string/mayor_menor" />
+    <item
         android:id="@+id/cerrarSesion"
         android:title="@string/cerrarSesiom" />
 </menu>

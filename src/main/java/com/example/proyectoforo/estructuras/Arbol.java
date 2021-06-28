@@ -112,8 +112,6 @@ public class Arbol implements Serializable {
 
     public void vaciar(){
         this.raiz = null;
-        this.raiz.setHijoDerecho(null);
-        this.raiz.setHijoIzquierdo(null);
     }
 
     public NodoArbol getRaiz() {

@@ -2,6 +2,7 @@
 <androidx.cardview.widget.CardView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_margin="10dp"
@@ -16,11 +17,30 @@
         android:orientation="vertical"
         android:padding="10dp">
 
-        <TextView
-            android:id="@+id/titulo"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/Titulo" />
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/titulo"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/Titulo" />
+
+            <TextView
+                android:id="@+id/Comentarios"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/comentarios" />
+
+            <TextView
+                android:id="@+id/cantidadComentarios"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="@string/cantidadComen" />
+        </LinearLayout>
 
         <TextView
             android:id="@+id/Descripcion"
@@ -35,4 +55,5 @@
             android:text="@string/Usuario" />
 
     </LinearLayout>
+
 </androidx.cardview.widget.CardView>

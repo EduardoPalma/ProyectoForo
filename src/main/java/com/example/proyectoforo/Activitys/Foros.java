@@ -48,9 +48,39 @@ public class Foros extends AppCompatActivity implements View.OnClickListener {
 
     private void llenarForos(NodoArbol raiz){
         if(raiz != null){
-            llenarForos(raiz.getHijoIzquierdo());
             this.foros.add(raiz.getForo());
-            llenarForos(raiz.getHijoDerecho());
+            menorMayor(raiz.getHijoIzquierdo());
+            menorMayor(raiz.getHijoDerecho());
+        }
+    }
+
+    private void menorMayor(NodoArbol raiz){
+        if(raiz != null){
+            menorMayor(raiz.getHijoIzquierdo());
+            this.foros.add(raiz.getForo());
+            menorMayor(raiz.getHijoDerecho());
+        }
+    }
+
+    private void mayorMenor(NodoArbol raiz){
+        if(raiz != null){
+            mayorMenor(raiz.getHijoDerecho());
+            this.foros.add(raiz.getForo());
+            mayorMenor(raiz.getHijoIzquierdo());
+        }
+    }
+
+    private void actualizar(int cantidad,ListaComentario lc){
+        for(int i=0;i<this.foros.size();i++){
+            if(this.foros.get(i).getLc().getCant() == cantidad){
+                this.foros.get(i).setLc(lc);
+            }
+        }
+    }
+
+    private void actualizarArbol(Arbol arbol){
+        for(int i=0;i<this.foros.size();i++){
+            arbol.insertar(this.foros.get(i));
         }
     }
 
@@ -70,6 +100,19 @@ public class Foros extends AppCompatActivity implements View.OnClickListener {
             if(item.getItemId() == R.id.cerrarSesion){
                 Intent inten = new Intent(this,IniciarSesion.class);
                 startActivityForResult(inten,2);
+                finish();
+            }else{
+                if(item.getItemId() == R.id.orMaMe){
+                    this.foros.clear();
+                    adapter.notifyDataSetChanged();
+                    mayorMenor(this.arbol.getRaiz());
+                }else{
+                    if(item.getItemId() == R.id.orMeMa){
+                        this.foros.clear();
+                        adapter.notifyDataSetChanged();
+                        menorMayor(this.arbol.getRaiz());
+                    }
+                }
             }
         }
         return super.onOptionsItemSelected(item);
@@ -91,8 +134,12 @@ public class Foros extends AppCompatActivity implements View.OnClickListener {
                 if(resultCode == Activity.RESULT_OK){
                     int cantidad = data.getExtras().getInt("cantidad");
                     ListaComentario list = (ListaComentario) data.getExtras().getSerializable("lista");
-                    Foro f = this.arbol.buscarForo(cantidad);
-                    f.setLc(list);
+                    actualizar(cantidad,list);
+                    this.arbol.vaciar();
+                    actualizarArbol(this.arbol);
+                    this.foros.clear();
+                    adapter.notifyDataSetChanged();
+                    llenarForos(this.arbol.getRaiz());
                 }
             }
         }

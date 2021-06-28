@@ -38,6 +38,8 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolderForo> implem
         holder.titulo.setText(foros.get(position).getTitulo());
         holder.descrip.setText(foros.get(position).getDescrip());
         holder.idUsuario.setText(foros.get(position).getU().getNombreUsuario());
+        holder.cantidadComen.setText(String.valueOf(foros.get(position).getLc().getCant()));
+        holder.Co.setText("Co : ");
 
     }
 
@@ -57,10 +59,12 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolderForo> implem
     }
 
     public class ViewHolderForo extends RecyclerView.ViewHolder{
-        TextView titulo,descrip,idUsuario;
+        TextView titulo,descrip,idUsuario,cantidadComen,Co;
 
         public ViewHolderForo(@NonNull View itemView) {
             super(itemView);
+            cantidadComen = (TextView) itemView.findViewById(R.id.cantidadComentarios);
+            Co = (TextView) itemView.findViewById(R.id.Comentarios);
             titulo = (TextView) itemView.findViewById(R.id.titulo);
             descrip = (TextView) itemView.findViewById(R.id.Descripcion);
             idUsuario = (TextView) itemView.findViewById(R.id.Usuario);
